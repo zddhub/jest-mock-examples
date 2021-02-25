@@ -4,6 +4,7 @@
   "description": "Show some frequently-used mock examples",
   "main": "index.js",
   "scripts": {
+    "build": "tsc --build tsconfig.json",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles",
     "eslint": "eslint -c .eslintrc.js --ext .ts src test"
   },
