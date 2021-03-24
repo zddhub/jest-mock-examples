@@ -1,7 +1,6 @@
 export const mockAdd = jest.fn() // export and mock it in test
+mockAdd.mockReturnValue(12)
 
-const utils = {
+export default {
   add: mockAdd,
 }
-
-export default utils

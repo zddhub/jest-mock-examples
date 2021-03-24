@@ -4,7 +4,7 @@ import { mockAdd } from '../src/__mocks__/utilsWithMock'
 jest.mock('../src/utilsWithMock')
 
 describe('Test utilsWithMock', () => {
-  beforeEach(jest.resetAllMocks)
+  beforeEach(jest.resetModules)
 
   describe('test mockAdd method', () => {
     beforeEach(() => {
@@ -12,13 +12,15 @@ describe('Test utilsWithMock', () => {
       //  (a: string, b: string) => parseInt(`${a}${b}`)
     })
 
-    xit('returns 12 using mockAdd', () => {
-      // mockAdd.mockImplementation((a: number, b: number): number => {
-      //   return parseInt(`${a}${b}`)
-      // })
-      mockAdd.mockReturnValue(12)
-
+    it('returns 12 using __mocks__', () => {
       expect(utilsWithMock.add(1, 2)).toEqual(12)
+    })
+
+    xit('returns -1 using mockAdd', () => {
+      mockAdd.mockReturnValue(-1)
+      const result = utilsWithMock.add(1, 2)
+      expect(mockAdd).toBeCalled()
+      expect(result).toEqual(-1)
     })
   })
 })
