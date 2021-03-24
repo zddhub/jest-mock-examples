@@ -29,4 +29,17 @@ describe('Test utilsWithMock', () => {
       expect(env.default).toEqual('prod')
     })
   })
+
+  describe('When NODE_ENV is empty', () => {
+    beforeEach(() => {
+      delete process.env.NODE_ENV
+      // or
+      // process.env.NODE_ENV = ''
+      jest.resetModules()
+    })
+    it('returns test', async () => {
+      const env = await import('../src/env')
+      expect(env.default).toEqual('test')
+    })
+  })
 })
