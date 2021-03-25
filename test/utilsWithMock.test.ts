@@ -1,4 +1,5 @@
 import utilsWithMock from '../src/utilsWithMock'
+import { add } from '../src/utilsWithMock'
 import { mockAdd } from '../src/__mocks__/utilsWithMock'
 
 jest.mock('../src/utilsWithMock')
@@ -14,6 +15,7 @@ describe('Test utilsWithMock', () => {
 
     it('returns 12 using __mocks__', () => {
       expect(utilsWithMock.add(1, 2)).toEqual(12)
+      expect(add).toBeCalled()
     })
 
     xit('returns -1 using mockAdd', () => {

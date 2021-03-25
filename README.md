@@ -7,7 +7,7 @@ It's hard to mock data even though [jest guide][jest-guide-doc] has been read. S
 
 - [Import a single/an entire module's contents mocks](./test/utilsImportMethod.test.ts)
 - [Import defaults mocks](./test/utilsImportDefaultModule.test.ts)
-- [Manaul mocks](./test/utilsWithMock.test.ts)
+- [Manaul mocks](./test/utilsProxy.test.ts)
 - [Environment variables mocks](./test/env.test.ts)
 - [Complex timer mocks](./test/retryable.test.ts)
 
