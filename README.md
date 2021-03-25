@@ -12,3 +12,7 @@ It's hard to mock data even though [jest guide][jest-guide-doc] has been read. S
 - [Complex timer mocks](./test/retryable.test.ts)
 
 [jest-guide-doc]: https://jestjs.io/docs/getting-started
+
+## Other resources
+
+- [Jest examples](https://github.com/facebook/jest/tree/master/examples)
